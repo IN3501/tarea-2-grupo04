@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2> Datos del Usuario </h2>
+
+<!-- <form action="/action_page.php"> -->
+  Nombre:<br>
+  <input type="text" name="firstname"  placeholder="Escriba su nombre aqui" value="Mickey">
+  <br><br>
+  Apellido:<br>
+  <input type="text" name="lastname" placeholder="Escriba su apellido aqui" value="Mouse">
+  <br><br>
+  Clave: <br>
+  <input type="password" value="A1" id="examplePassword" placeholder="Ingrese su clave aqui">
+  <br><br>
+  Reingrese Clave:<br>
+  <input type="password" value="A2" id="examplePassword2" placeholder="Vuelva a ingresar su clave">
+  <br><br>
+  <p id="alerta"> </p>
+  Número:<br>
+  <input type="number" value="N1" id="exampleNumber"
+  placeholder="Ingrese su número telefonico">
+  <br><br>
+  Email:<br>
+  <input type="email" name="" id="exampleEmail" placeholder="Ingrese su email">
+  <br><br>
+  <input type="submit"  onclick="myFunction()" value="Submit">
+  
+
+  
+  <script>
+  function myFunction() {
+  var pass1 = document.getElementById("examplePassword");
+  var pass2 = document.getElementById("examplePassword2");
+  if(pass1.value == pass2.value) {
+    document.getElementById("alerta").innerHTML = "";
+  } else {
+    document.getElementById("alerta").innerHTML = "Claves no coinciden";
+  }
+  }
+  </script>
+
+
+
+<!--
+<p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
+-->
+
+
+</body>
+</html>
