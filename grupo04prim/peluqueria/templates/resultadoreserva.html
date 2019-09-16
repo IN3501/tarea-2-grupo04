@@ -1,0 +1,35 @@
+
+{% extends 'navbar.html' %}
+
+{% block title %}
+Reserva exitosa
+{% endblock title %}
+
+{% block content %}
+
+<h1> {{name}}, tu reserva ha sido registrada con éxito! <h1>
+<h2> Reserva sujeta a disponibilidad. Nos comunicaremos contigo para confirmación. <h2>
+<br>
+
+<b>Datos de reserva</b>
+<br>
+Servicio:  {{serv}}
+<br>
+Profesional: {{prof}}
+<br>
+Día: {{date}}
+<br>
+Hora: {{hour}}
+<br>
+<br>
+
+<b>Datos de cliente</b>
+<br>	
+Nombre : {{name}} {{lastname}}
+<br>
+Teléfono: {{fono}}
+<br>
+Correo electrónico: {{mail}}
+
+
+{% endblock content %}

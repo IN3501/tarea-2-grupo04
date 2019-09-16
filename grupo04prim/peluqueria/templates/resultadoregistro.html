@@ -1,0 +1,23 @@
+
+{% extends 'navbar.html' %}
+
+{% block title %}
+Registro exitoso
+{% endblock title %}
+
+{% block content %}
+
+<h1> {{name}}, tu registro se ha completado con éxito! <h1>
+<h2> Se registraron los siguientes datos: <h2>
+<br>
+
+Nombre:  {{name}}
+<br>
+Apellido: {{lastname}}
+<br>
+Teléfono: {{fono}}
+<br>
+Email: {{mail}}
+
+
+{% endblock content %}

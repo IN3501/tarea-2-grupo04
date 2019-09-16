@@ -1,0 +1,124 @@
+{% extends 'navbar.html' %}
+
+{% block title %}
+Reserva tu hora
+{% endblock title %}
+
+{% block content %}
+
+<div id="descripcion" class="container">
+    <h1>Reserva tu hora</h1>
+
+<!-- En este segmento debemos indicarle al formulario qué hacer cuando se hace clic en el botón submit -->
+    <form action="/resultadoreserva" method="POST" autocomplete="off">  {% csrf_token %}
+
+<div class="form-group">
+      <label for="exampleFormControlSelect1">Selecciona el servicio que quieres reservar</label>
+      <select class="form-control" id="exampleSelect" name="inputservicio">
+        <option value="Alisado permanente">Alisado permanente</option>
+        <option value="Balayage">Balayage</option>
+        <option value="Baño de color">Baño de color</option>
+        <option value="Barrido de color">Barrido de color</option>
+        <option value="Botox restaurador">Botox restaurador</option>
+        <option value="Brushing">Brushing</option>
+        <option value="Coloración completa">Coloración completa</option>
+        <option value="Corte mujer">Corte mujer</option>
+        <option value="Corte hombre">Corte hombre</option>
+        <option value="Masaje capilar">Masaje capilar</option>
+         <option value="Mechas">Mechas</option>
+        <option value="Peinado">Peinado</option>        
+        <option value="Reflejos">Reflejos</option>
+        <option value="Visos">Visos</option>
+        
+        </select>
+    </div>
+
+ Selecciona al profesional
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="inputprofesional" id="exampleRadios1" value="Fernando" checked>
+      <label class="form-check-label" for="exampleRadios1">
+        Fernando
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="inputprofesional" id="exampleRadios2" value="Javiera">
+      <label class="form-check-label" for="exampleRadios2">
+        Javiera
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="inputprofesional" id="exampleRadios3" value="Daniela">
+      <label class="form-check-label" for="exampleRadios3">
+        Daniela
+      </label>
+    </div>
+<br>
+   <div class="form-group">
+      <label for="exampleNumber">Selecciona el día</label>
+      <input type="date" class="form-control" id="exampleDate" placeholder="Ingrese Fecha" name="inputfecha">
+    </div>
+
+
+<div class="form-group">
+      <label for="exampleFormControlSelect1">Selecciona la hora</label>
+      <select class="form-control" id="exampleSelect" name="inputhora">
+        <option value="09:00">09:00</option>
+        <option value="09:30">09:30</option>
+        <option value="10:00">10:00</option>
+        <option value="10:30">10:30</option>
+        <option value="11:00">11:00</option>
+        <option value="11:30">11:30</option>
+        <option value="12:00">12:00</option>
+        <option value="12:30">12:30</option>
+        <option value="13:00">13:00</option>
+        <option value="14:00">14:00</option>
+        <option value="14:30">14:30</option>
+        <option value="15:00">15:00</option>
+        <option value="15:30">15:30</option>
+        <option value="16:00">16:00</option>
+        <option value="16:30">16:30</option>
+        <option value="17:00">17:00</option>
+        <option value="17:30">17:30</option>
+        <option value="18:00">18:00</option>
+        <option value="18:30">18:30</option>
+        <option value="19:00">19:00</option>
+        <option value="19:30">19:30</option>
+        <option value="20:00">20:00</option>
+        </select>
+    </div>
+
+<h1>Ingresa tus datos</h1>
+
+<div class="form-group">
+      <label for="exampleInputEmail1">Nombre</label>
+      <input type="text" class="form-control" id="exampleText" placeholder="Ingrese su nombre" name="inputnombre">
+    </div>
+
+<div class="form-group">
+      <label for="exampleInputEmail1">Apellido</label>
+      <input type="text" class="form-control" id="exampleText" placeholder="Ingrese su apellido" name="inputapellido">
+    </div>
+
+<div class="form-group">
+      <label for="exampleNumber">Teléfono</label>
+      <input type="number" class="form-control" id="exampleNumber" placeholder="Ingrese teléfono" name="inputtelefono">
+    </div>
+
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email</label>
+      <input type="email" class="form-control" id="exampleEmail" placeholder="Ingrese email" name="inputemail">
+    </div>
+
+
+    <br>
+ 
+
+    <div class="form-group">
+    <button type="submit" class="btn btn-primary">Enviar</button>
+    </div>
+  
+  </form>
+       
+</div>
+
+{% endblock content %}
